@@ -2,6 +2,7 @@
 #define LEVEL_H
 
 #include <string>
+#include "customerQueue.h"
 
 class Level {
 private:
