@@ -1,12 +1,17 @@
-#include <iostream>
-#include "level.h"
+#include "CustomerFactory.h"
+#include "Customer.h"
 
-using namespace std;
+void startGame() {
+    // Contoh penggunaan
+    std::vector<Customer*> customers;
+    for (int i = 0; i < 5; ++i) {
+        customers.push_back(CustomerFactory::createRandomCustomer());
+    }
+    
+    CustomerFactory::addCustomersToQueue(customers);
+}
 
 int main() {
-    // Memulai permainan
-    Level level("Medium", "Serve all customers", 60);
-    level.start();
-
+    startGame();
     return 0;
 }
